@@ -24,6 +24,10 @@ class PortfoliosController < ApplicationController
     
   end
 
+  def show
+
+  end
+
   def update
     respond_to do |format|
         if @portfolio_item.update(portfolio_params)

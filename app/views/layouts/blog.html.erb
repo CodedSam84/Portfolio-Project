@@ -12,8 +12,6 @@
 
   <body>
     <%= login_helper %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <%= yield %>
     <%= render "shared/nav", location: "bottom" %>
     <%= source_helper("blog") %>

@@ -15,4 +15,37 @@ module ApplicationHelper
       content_tag(:p, greeting, class: "source-greeting" )
     end
   end
+
+  def link_items
+    [
+      {
+        path: root_path, page: "Home"
+      },
+      {
+        path: about_me_path, page: "About"
+      },
+      {
+        path: contact_path, page: "Contact"
+      },
+      {
+        path: blogs_path, page: "Blog"
+      },
+      {
+        path: portfolios_path, page: "Portfolio"
+      }
+    ]
+  end
+
+  def nav_helper tag, style
+    link_nav = ""
+    link_items.each do |item|
+      link_nav << "<#{tag}><a href= '#{item[:path]}' class= '#{style} #{nav_active? item[:path]}'>#{item[:page]}</a></#{tag}>"
+    end
+
+    link_nav.html_safe
+  end
+
+  def nav_active? path
+    "active" if current_page? path
+  end
 end

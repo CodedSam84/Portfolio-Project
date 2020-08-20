@@ -1,4 +1,5 @@
 class Portfolio < ApplicationRecord
+  acts_as_list
   has_many :technologies
   accepts_nested_attributes_for :technologies,
                                  reject_if: proc { |attributes| attributes['name'].blank? }

@@ -1,5 +1,5 @@
 class PortfoliosController < ApplicationController
-  before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
+  before_action :set_portfolio, only: [:show, :edit, :update, :destroy, :move]
   layout "portfolio"
   access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
   def index
@@ -10,6 +10,10 @@ class PortfoliosController < ApplicationController
     @angular_portfolio_items = Portfolio.angular
   end
 
+  def move
+    @portfolio_item.insert_at(params[:position].to_i)
+    head :ok
+  end
   def new
     @portfolio_item = Portfolio.new
     3.times { @portfolio_item.technologies.build }

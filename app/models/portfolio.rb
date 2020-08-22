@@ -1,10 +1,13 @@
 class Portfolio < ApplicationRecord
   acts_as_list
-  has_many :technologies
+  has_many :technologies, dependent: :destroy
   accepts_nested_attributes_for :technologies,
                                  reject_if: proc { |attributes| attributes['name'].blank? }
   include Placeholder
   validates :title, :body, :main_image, :thumb_image, presence: true
+
+  mount_uploader :thumb_image, PortfolioUploader
+  mount_uploader :main_image, PortfolioUploader
 
   def self.angular
     where(subtitle: "Angular")

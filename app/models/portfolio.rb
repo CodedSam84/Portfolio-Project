@@ -1,10 +1,12 @@
 class Portfolio < ApplicationRecord
   acts_as_list
-  has_many :technologies
+  has_many :technologies, dependent: :destroy
   accepts_nested_attributes_for :technologies,
                                  reject_if: proc { |attributes| attributes['name'].blank? }
-  include Placeholder
   validates :title, :body, :main_image, :thumb_image, presence: true
+
+  mount_uploader :thumb_image, PortfolioUploader
+  mount_uploader :main_image, PortfolioUploader
 
   def self.angular
     where(subtitle: "Angular")
@@ -15,11 +17,4 @@ class Portfolio < ApplicationRecord
   end
 
   scope :ruby_on_rails_portfolio_items, -> {where(subtitle: "Ruby on Rails")}
-
-  after_initialize :set_defaults
-
-  def set_defaults
-    self.main_image ||= Placeholder.image_generator(600,400)
-    self.thumb_image ||= Placeholder.image_generator(350,200)
-  end
 end

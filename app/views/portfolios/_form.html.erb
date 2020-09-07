@@ -1,8 +1,15 @@
 <%= form_for portfolio_item do |f| %>
   <div class="row">
     <div class="col-md-6">
+      <% if portfolio_item.errors.any? %>
+        <div id="notice_wrapper">
+          <% portfolio_item.errors.full_messages.each do |message| %>
+            <p><%= message %></p>
+          <% end %>
+        </div> 
+      <% end %>
       <div class = "form-group">
-        <%= f.label :title, 'Title' %>:
+        <%= f.label :title, 'Title'%>:
         <%= f.text_field :title, class: "form-control" %>
       </div>
       <div class = "form-group">
@@ -31,15 +38,19 @@
     
     <div class="col-md-12">
       <h2>Technologies Used:</h2>
-      <%= f.fields_for :technologies do |technology_form| %>
-        <div class="form-group">
-          <%= technology_form.label :name %>
-          <%= technology_form.text_field :name, class: "form-control" %>
+      <div id=technologies>
+        <%= f.fields_for :technologies do |technology_form| %>
+          <%= render 'technology_fields', f: technology_form %> 
+        <% end %>
+        <div class='links'>
+          <%= link_to_add_association 'add technology', f, :technologies %>
         </div>
-      <% end %>
+      </div>
+
       <div class="form-group">
         <%= f.submit "Save Portfolio Item", class: "btn btn-primary btn-block" %>
       </div>
     </div>
   </div>
 <% end %>
+

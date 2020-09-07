@@ -2,7 +2,8 @@ class Portfolio < ApplicationRecord
   acts_as_list
   has_many :technologies, dependent: :destroy
   accepts_nested_attributes_for :technologies,
-                                 reject_if: proc { |attributes| attributes['name'].blank? }
+                                 reject_if: proc { |attributes| attributes['name'].blank? },
+                                 allow_destroy: true
   validates :title, :body, :main_image, :thumb_image, presence: true
 
   mount_uploader :thumb_image, PortfolioUploader

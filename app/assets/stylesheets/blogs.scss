@@ -131,3 +131,22 @@
    .social-links li {
      font-size: 2.5rem;
    }
+
+   #notice_wrapper {
+    position: absolute;
+    top: 0;
+    background: rgba(135, 216, 211, 0.85);
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    border-radius: 20px;
+    font-weight: 700;
+    .alert, .notice {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      padding-top: 1rem;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+  } 

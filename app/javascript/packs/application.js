@@ -7,12 +7,17 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require('jquery')
 import Sortable from 'sortablejs';
+import "alerts"
+import 'sweetalert'
 
+//= require sweetalert2
 //= require jquery
 //= require jquery3
 //= require jquery-ui/widgets/sortable
 //= require rails_sortable
+//= require cocoon
 //= require popper
 //= require bootstrap-sprockets
 //= require_tree . # will add html.sortable
@@ -24,3 +29,4 @@ import Sortable from 'sortablejs';
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 import "controllers"
+import 'cocoon-js'

@@ -146,3 +146,19 @@ body {
 .mastfoot {
   color: white;
 }
+
+#notice_wrapper {
+  position: absolute;
+  top: 0;
+  background: rgba(135, 216, 211, 0.85);
+  left: 0;
+  width: 100%;
+  text-align: center;
+  .alert, .notice {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+} 

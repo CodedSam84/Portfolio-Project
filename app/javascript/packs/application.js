@@ -9,7 +9,10 @@ require("@rails/activestorage").start()
 require("channels")
 require('jquery')
 import Sortable from 'sortablejs';
+import "alerts"
+import 'sweetalert'
 
+//= require sweetalert2
 //= require jquery
 //= require jquery3
 //= require jquery-ui/widgets/sortable

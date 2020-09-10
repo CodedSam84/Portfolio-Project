@@ -1,0 +1,23 @@
+<main role="main" class="inner cover">
+  <h1 class="cover-heading">Tech News</h1>
+  <div class="row">
+    <% @news.each do |news_item| %>
+      <div class="col-md-6">
+        <div class="tech-news">
+          <div class="card">
+            <%= "@name=#{news_item.name}," %>
+            <%= "@author=#{news_item.author}," %>
+            <%= "@title=#{news_item.title}," %>
+            <%= "@content=#{news_item.content}," %>
+            <%= "@url=#{news_item.url}," %>
+            <%= "@publishedAt=#{news_item.publishedAt}," %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</main>
+
+<%= @news.inspect %>
+
+

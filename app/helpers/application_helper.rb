@@ -32,6 +32,9 @@ module ApplicationHelper
       },
       {
         path: portfolios_path, page: "Portfolio"
+      },
+      {
+        path: tech_news_path, page: "Tech-News"
       }
     ]
   end

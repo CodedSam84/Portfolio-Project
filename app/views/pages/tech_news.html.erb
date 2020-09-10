@@ -9,7 +9,7 @@
             <%= "@author=#{news_item.author}," %>
             <%= "@title=#{news_item.title}," %>
             <%= "@content=#{news_item.content}," %>
-            <%= "@url=#{news_item.url}," %>
+            <%= news_url_parser(news_item.url) %>
             <%= "@publishedAt=#{news_item.publishedAt}," %>
           </div>
         </div>
@@ -17,7 +17,3 @@
     <% end %>
   </div>
 </main>
-
-<%= @news.inspect %>
-
-

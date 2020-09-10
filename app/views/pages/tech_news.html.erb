@@ -5,10 +5,7 @@
       <div class="col-md-6">
         <div class="tech-news">
           <div class="card">
-            <%= "@name=#{news_item.name}," %>
             <%= "@author=#{news_item.author}," %>
-            <%= "@title=#{news_item.title}," %>
-            <%= "@content=#{news_item.content}," %>
             <%= news_url_parser(news_item.url) %>
             <%= "@publishedAt=#{news_item.publishedAt}," %>
           </div>

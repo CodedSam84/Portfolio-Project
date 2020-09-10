@@ -39,7 +39,7 @@ body {
 }
 
 .cover-container {
-  max-width: 55em;
+  max-width: 65em;
 }
 
 
@@ -161,4 +161,17 @@ body {
     font-size: 1rem;
     font-weight: 700;
   }
-} 
+}
+
+.tech-news {
+  color: black;
+  margin: 10px;
+}
+
+.tech-news a {
+  color: green;
+}
+
+.tech-news > .card {
+  padding: 30px;
+}

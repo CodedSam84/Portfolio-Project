@@ -9,14 +9,13 @@ class BlogsController < ApplicationController
     @page_title = "My Portfolio Blog"
   end
 
-  # GET /blogs/1
-  # GET /blogs/1.json
   def show
+    @blog = Blog.includes(:comments).friendly.find(params[:id])
+    @comment = Comment.new
     @page_title = @blog.title
     @seo_keyword = @blog.body
   end
 
-  # GET /blogs/new
   def new
     @blog = Blog.new
   end

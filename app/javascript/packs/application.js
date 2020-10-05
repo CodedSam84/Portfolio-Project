@@ -30,3 +30,7 @@ import 'sweetalert'
 // const imagePath = (name) => images(name, true)
 import "controllers"
 import 'cocoon-js'
+import "channels"
+
+
+

@@ -4,11 +4,7 @@ function createLine(data) {
     <div class="comment-card">
       <div class="card">
         <div class="row no-gutters">
-          <div class="col-md-1">
-          
-          </div>
-  
-          <div class="col-md-11">
+          <div class="col-md-12">
             <div class="card-body" id="comment"> 
               <p class="card-text">${data['message']}</p>
             </div>

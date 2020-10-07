@@ -7,4 +7,4 @@ class BlogsChannel < ApplicationCable::Channel
     ActionCable.server.broadcast "blogs_#{params[:blog_id]}_channel", message: data["message"]
     current_user.comments.create!(content: data["message"], blog_id: data["blog_id"])
   end
-end 
+end

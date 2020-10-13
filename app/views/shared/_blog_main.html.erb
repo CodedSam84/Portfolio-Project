@@ -1,3 +1,4 @@
 <h1 class="pb-3 mb-3">My Blogs</h1>
-<h4 class="pb-4 mb-4 border-bottom"><%= link_to 'Write a New Blog', new_blog_path if logged_in?(:site_admin) %></h4>
-<h4 class="pb-4 mb-4 border-bottom"><%= link_to 'Topics', topics_path %></h4>
+<%= link_to 'Write a New Blog', new_blog_path if logged_in?(:site_admin) %>
+<%= link_to 'Topics', topics_path %>
+<hr>

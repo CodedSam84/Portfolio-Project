@@ -3,6 +3,6 @@ class Topic < ApplicationRecord
   validates :title, presence: true
 
   def self.with_blogs
-    includes(:blogs).where.not(blogs: {id: nil})
+    includes(:blogs).where.not(blogs: {id: nil, status: :draft})
   end
 end

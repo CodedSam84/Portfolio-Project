@@ -179,3 +179,16 @@ body {
 .tech {
   text-align: center;
 }
+
+.about-card-container {
+  color:black;
+  padding: 30px;
+}
+
+.about-card-container > .card {
+  padding: 40px
+}
+
+.about-card-container a{
+  color: green;
+}

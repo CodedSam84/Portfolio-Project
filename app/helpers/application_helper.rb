@@ -22,7 +22,7 @@ module ApplicationHelper
         path: root_path, page: "Home"
       },
       {
-        path: about_me_path, page: "About"
+        path: about_me_path, page: "About Me"
       },
       {
         path: contact_path, page: "Contact"

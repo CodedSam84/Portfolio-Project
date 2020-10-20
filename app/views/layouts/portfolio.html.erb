@@ -15,9 +15,10 @@
 
   <body>
     <%= render "shared/portfolio_nav" %>
-    <%= render "shared/flash_messages" %>
+    
     <main role="main">
       <%= render "shared/portfolio_header" unless logged_in?(:site_admin) %>
+      <%= render "shared/flash_messages" %>
       <%= yield %>
     </main>
 

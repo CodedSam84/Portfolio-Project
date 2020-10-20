@@ -16,11 +16,11 @@
 
   <body>
     <main role="main" class="container">
-      <%= render "shared/flash_messages" %>
       <%= render "shared/blog_nav" %>
       <div class="row">
         <div class="col-md-8 blog-main">
           <%= render "shared/blog_main" %>
+          <%= render "shared/flash_messages" %>
           <%= yield %> 
         </div>
         <%= render 'shared/blog_sidebar'%>
@@ -30,12 +30,3 @@
   </body>
 </html>
 
-<script>
-  $(document).ready(function(){
-    setTimeout(function(){
-      $('#notice_wrapper').fadeOut("slow", function() {
-        $(this).remove();
-      })
-    }, 2500);
-  });
-</script> 

@@ -10,6 +10,25 @@ Blog.destroy_all
 Skill.destroy_all
 Portfolio.destroy_all
 
+User.create!(
+  email: "sammy@yahoo.com",
+  password: "123456",
+  password_confirmation: "123456",
+  name: "Admin User",
+  roles: "site_admin"
+)
+
+puts "1 admin user created"
+
+User.create!(
+  email: "samuel@gmail.com",
+  password: "123456",
+  password_confirmation: "123456",
+  name: "Samuel Atobatele",
+)
+
+ puts "1 regular user created"
+
 3.times do |topic|
   Topic.create!(
     title: "Topic #{topic}"

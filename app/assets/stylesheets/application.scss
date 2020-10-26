@@ -1,4 +1,4 @@
-@import "bootstrap";
+@import "bootstrap/scss/bootstrap";
 /*
  * Globals
  */
@@ -20,7 +20,6 @@ a:hover {
   border: .05rem solid #fff;
 }
 
-
 /*
  * Base structure
  */
@@ -28,6 +27,7 @@ a:hover {
 html,
 body {
   height: 100%;
+  font-family: 'Lato', sans-serif;
 }
 
 body {
@@ -38,6 +38,14 @@ body {
   box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
 }
 
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: 'Roboto', sans-serif;
+}
 .cover-container {
   max-width: 65em;
 }
@@ -149,10 +157,10 @@ body {
 
 #notice_wrapper {
   position: absolute;
-  top: 0;
-  background: rgba(135, 216, 211, 0.85);
-  left: 0;
-  width: 100%;
+  top: 400;
+  background: black;
+  left: 900;
+  width: 20%;
   text-align: center;
   .alert, .notice {
     margin-top: 0;
@@ -178,4 +186,21 @@ body {
 
 .tech {
   text-align: center;
+}
+
+.about-card-container {
+  color:black;
+  padding: 30px;
+}
+
+.about-card-container > .card {
+  padding: 40px
+}
+
+.about-card-container a{
+  color: green;
+}
+
+.card-body {
+  margin-bottom: 7px;
 }

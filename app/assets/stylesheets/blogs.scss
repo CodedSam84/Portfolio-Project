@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-@import "bootstrap";
+@import "bootstrap/scss/bootstrap";
 @import "font-awesome";
 .blog-header {
     line-height: 1;
@@ -19,7 +19,11 @@
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  body {
+    font-family: 'Lato', sans-serif;
   }
   
   .display-4 {
@@ -135,9 +139,9 @@
    #notice_wrapper {
     position: absolute;
     top: 0;
-    background: rgba(135, 216, 211, 0.85);
-    left: 0;
-    width: 100%;
+    background: black;
+    right: 0;
+    width: 20%;
     text-align: center;
     color: #fff;
     border-radius: 20px;
@@ -152,4 +156,8 @@
   } 
   .comment-card > .card {
     margin-top: 15px;
+  }
+  .blogcrumb a {
+    font-size: 25px;
+    margin: 0px 10px 0px 10px;
   }

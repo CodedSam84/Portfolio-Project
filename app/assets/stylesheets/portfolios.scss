@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-@import "bootstrap";
+@import "bootstrap/scss/bootstrap";
 .jumbotron {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -16,12 +16,25 @@
     }
   }
   
+  body {
+    font-family: 'Lato', sans-serif;
+  }
+
   .jumbotron p:last-child {
     margin-bottom: 0;
   }
   
   .jumbotron h1 {
     font-weight: 300;
+  }
+
+  h1, .h1,
+  h2, .h2,
+  h3, .h3,
+  h4, .h4,
+  h5, .h5,
+  h6, .h6 {
+    font-family: 'Roboto', sans-serif;
   }
   
   .jumbotron .container {
@@ -54,10 +67,10 @@
 
   #notice_wrapper {
     position: absolute;
-    top: 0;
-    background: rgba(135, 216, 211, 0.85);
-    left: 0;
-    width: 100%;
+    top: 70px;
+    background: black;
+    left: 700px;
+    width: 20%;
     text-align: center;
     color: #fff;
     border-radius: 20px;

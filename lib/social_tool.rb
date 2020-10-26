@@ -4,7 +4,7 @@ module SocialTool
   def self.news_search
     newsapi = News.new(ENV.fetch("apiKey"))   
 
-    all_articles = newsapi.get_everything(q: 'web developer',
+    all_articles = newsapi.get_everything(q: 'programming',
                                         sources: 'techcrunch,ars-technica',
                                         language: 'en',
                                         sortBy: 'relevancy',

@@ -27,7 +27,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -161,6 +161,7 @@ h6, .h6 {
   background: black;
   left: 900;
   width: 20%;
+  border-radius: 20px;
   text-align: center;
   .alert, .notice {
     margin-top: 0;
@@ -203,4 +204,18 @@ h6, .h6 {
 
 .card-body {
   margin-bottom: 7px;
+}
+
+#background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  background: image-url("background.jpeg") no-repeat;
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+  z-index: -1;
 }

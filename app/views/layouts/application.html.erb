@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -16,13 +16,7 @@
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
       <%= render "shared/flash_messages" %>
       <%= render "shared/application_nav" %>
-      <%= video_tag "HardDrivePhotojpeg.mp4",
-          id: "background", 
-          autoplay: true,
-          loop: true, 
-          muted: true, 
-          poster: "home_bg.png"
-       %>
+      <div id="background"></div>
       <%= yield %>
       <%= render "shared/application_footer" %>
     </div>

@@ -190,8 +190,11 @@ h6, .h6 {
 }
 
 .about-card-container {
+  display:flex;
   color:black;
   padding-top: 30px;
+  justify-content: center;
+  width: 110%;
 }
 
 .about-card-container > .card {

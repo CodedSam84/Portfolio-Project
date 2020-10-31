@@ -1,9 +1,16 @@
 <header class="masthead mb-auto">
   <div class="inner">
     <h3 class="masthead-brand">Samuel Atobatele</h3>
-    <nav class="nav nav-masthead justify-content-center app-nav">
-      <%= nav_helper "span", "nav-link" %>
-      <%= login_helper "nav-link" %>
+    <nav class="nav-masthead app-nav navbar navbar-expand-lg navbar-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <%= nav_helper "span", "nav-link" %>
+          <%= login_helper "nav-link" %>
+        </div>
+      </div>
     </nav>
   </div>
 </header>

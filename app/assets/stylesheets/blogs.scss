@@ -161,3 +161,39 @@
     font-size: 25px;
     margin: 0px 10px 0px 10px;
   }
+
+  .blog-nav {
+    background-color: #3B2F63;
+    padding: 45px;
+    margin-bottom: 30px;
+  }
+
+  .nav-action {
+    padding: 8.3rem;
+    position: absolute;
+    width: 60%;
+  }
+
+  .nav-action a {
+    text-decoration: none;
+  }
+
+  .nav-menu {
+    position: absolute;
+    left: 500px;
+    bottom: 35px;
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+  }
+
+  .blog-links {
+    color: white;
+    text-decoration: none;
+    padding: 1.5rem;
+  }
+
+  .nav-action {
+    color: white;
+  }

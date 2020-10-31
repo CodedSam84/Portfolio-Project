@@ -164,7 +164,7 @@
 
   .blog-nav {
     background-color: #3B2F63;
-    padding: 10px;
+    padding: 0px;
     margin-bottom: 30px;
   }
 
@@ -183,10 +183,6 @@
     left: 500px;
     bottom: 35px;
   }
-  
-  .nav-menu a {
-    text-decoration: none;
-  }
 
   .blog-links {
     color: white;
@@ -194,6 +190,6 @@
     padding: 1.5rem;
   }
 
-  .nav-action {
-    color: white;
+  .navbar a {
+    text-decoration: none; 
   }

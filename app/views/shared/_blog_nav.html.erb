@@ -1,14 +1,13 @@
 
-  <nav class="navbar navbar-light d-flex navbar-expand-lg blog-nav">
-    <h3><%= link_to "Samuel Atobatele", root_path, class: "blog-links" %></h3>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<nav class="navbar navbar-light d-flex navbar-expand-lg blog-nav">
+  <%= link_to "Samuel Atobatele", root_path, class: "blog-links" %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <%= nav_helper "span", "blog-links h5" %>
-      <span><%= login_helper "p-4 blog-links mr-4 h5" %></span>
+      <%= nav_helper "span", "blog-links" %>
+      <span><%= login_helper "p-4 blog-links" %></span>
     </div>
   </div>
-  </nav>
+</nav>
